@@ -1,1 +1,0 @@
-const calculoMatematico = require("./modulo/calcular.js")
