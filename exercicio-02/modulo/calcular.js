@@ -30,11 +30,18 @@ const recuperacaoDoAluno = function (media, notaExame){
     let notaE = notaExame
     let mediaAntiga = media
     let mediaFinal = (Number(notaE) + Number(mediaAntiga)) / 2
+
+    
+    if(mediaFinal >= 60)
+        return 'Aprovado'
+    else 
+        return 'Reprovado'
+}
     
     return mediaFinal
 
     
-}
+
 
 
 //Chama a função para calcular a média

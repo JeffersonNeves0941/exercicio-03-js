@@ -29,17 +29,16 @@ const validarGenero = function(genero){
 
 
 
-const validarNota = function(validarN1, validarN2, validarN3, validarN4){
+const validarNota = function(n1, n2, n3, n4){
 
-    if(validarN1 == '' || validarN2 == '' || validarN3 == '' || validarN4 == '')
+    if(n1 == "" || n2 == "" || n3 == "" ||n4 == "")
         return false
-    else if (isNaN(validarN1) || isNaN(validarN2) || isNaN(validarN3) || isNaN(validarN4))
-        return false
+  
     else if (
-        validarN1 > 100 || validarN1 < 0 ||
-        validarN2 > 100 || validarN2 < 0 ||
-        validarN3 > 100 || validarN3 < 0 ||
-        validarN4 > 100 || validarN4 < 0
+       n1 > 100 || n1 < 0 ||
+        n2 > 100 || n2 < 0 ||
+        n3 > 100 || n3 < 0 ||
+        n4 > 100 || n4 < 0
     )
         return false
     else
@@ -52,23 +51,7 @@ const validarNota = function(validarN1, validarN2, validarN3, validarN4){
 
 
 
-const definirStatusAluno = function(media){
 
-    if(media >= 70)
-        return 'Aprovado'
-    else if(media >= 50)
-        return 'Recuperação'
-    else
-        return 'Reprovado'
-}
-
-const StatusComExame = function(mediaComExame){
-
-    if(mediaComExame >= 60)
-        return 'Aprovado'
-    else 
-        return 'Reprovado'
-}
 
 
 

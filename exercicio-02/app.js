@@ -36,37 +36,33 @@ entradaDeDados.question("Digite o nome do aluno: ", function (nomeA) {
                                     entradaDeDados.question("Digite a quarta nota: ", function (n4) {
                                         let valor4 = n4
 
-                                    
-
-                                    
 
 
 
-                            
+                                        const calculo = require("./modulo/calcular.js")
+                                        let retorno = calculo.calcularMedia(valor1, valor2, valor3, valor4)
+                                        return retorno
 
 
-                         
-
-                            const calculo = require("./modulo/calcular.js")
-                            let retorno = calculo.calcularMedia(valor1, valor2, valor3, valor4)
-                            return retorno
 
 
-                            if (statusDoAluno == "Recuperação") {
-                                entradaDeDados.question("Qual a nota do exame? ", function (exame) {
-                                    let exameFinal = exame
+                                      
 
-                                })
-                            }
+                                        })
+                                        if (statusDoAluno == "Recuperação") {
+                                            const statusFinal = require("./modulo/calcular.js")
+                                            let mostrarStatus = statusFinal.recuperacaoDoAluno(notEqual, mediaAntiga)
+                                }
+                                
 
                             entradaDeDados.close(); // Importante fechar a interface
-                        })
-                                })
                             })
                         })
                     })
                 })
             })
         })
+    })
+})
     })
 })
